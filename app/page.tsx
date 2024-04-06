@@ -15,7 +15,7 @@ export default function Home() {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-[-99]"></div>
       <EvervaultCard className="absolute top-0 left-0 w-full h-full z-[9]" />
 
-      <div className=" w-full h-full z-[99] border border-green-600 rounded-xl flex flex-col">
+      <div className=" w-full h-full z-[99] border border-[#43b243] rounded-xl flex flex-col">
         <Navbar />
         <Main />
       </div>

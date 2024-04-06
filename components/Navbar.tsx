@@ -2,8 +2,9 @@
 
 import React from "react";
 import localFont from "next/font/local";
-import { SlCalender } from "react-icons/sl";
-import { FaRegClock, FaWifi } from "react-icons/fa";
+import { FaPhoneAlt, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import Link from "next/link";
 
 const myFont = localFont({
   src: "../fonts//UNICODE0.ttf",
@@ -11,18 +12,20 @@ const myFont = localFont({
 
 const Navbar = () => {
   return (
-    <div className="bg-green-600 rounded-t-xl h-[50px] px-6 flex items-center justify-between z-[999]">
+    <div className="bg-[#43b243] rounded-t-xl h-[50px] px-6 flex items-center justify-between z-[999]">
       <h1 className={`${myFont.className} text-3xl`}>S</h1>
-      <div className="flex items-center gap-8">
+      <div className="sm:flex items-center gap-8 hidden">
         <div className="flex items-center gap-2">
-          <SlCalender />
-          <p>March 22, 2024</p>
+          <FaPhoneAlt />
+          <p>+91-7678265751</p>
         </div>
         <div className="flex items-center gap-2">
-          <FaRegClock />
-          <p>14:46</p>
+          <MdEmail />
+          <p>sushant20.sharma00@gmail.com</p>
         </div>
-        <FaWifi />
+        <Link href="https://github.com/savarkavi" target="_blank">
+          <FaGithub />
+        </Link>
       </div>
     </div>
   );

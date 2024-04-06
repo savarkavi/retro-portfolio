@@ -11,6 +11,8 @@ import {
   GlowingStarsTitle,
 } from "./ui/glowing-stars";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const myFont = localFont({
   src: "../fonts/3D-Thirteen-Pixel-Fonts.ttf",
@@ -35,17 +37,57 @@ const Content = ({
   };
 
   return (
-    <div className="realtive">
-      <div className="z-[999] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
-        <h1 className={`${myFont.className} text-9xl text-white`}>
+    <div className="realtive p-4 mt-6 w-full">
+      <div className="z-[99] absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[350px] xl:max-w-[1000px] text-center flex flex-col items-center">
+        <div className="relative w-full max-w-[500px] h-[250px]">
+          <Image
+            src="/homegify.gif"
+            alt="home img"
+            fill
+            className="object-contain"
+          />
+        </div>
+        <h1
+          className={`${myFont.className} text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-white`}
+        >
           SUSHANT SHARMA
         </h1>
+        <p className="text-white xl:text-2xl">Full-stack Developer</p>
       </div>
 
       <AnimatePresence mode="wait">
+        {openFolder === "about" && (
+          <motion.div
+            className="bg-black border w-full max-w-[1000px] mx-auto h-[600px] rounded-xl relative z-[999] flex flex-col xl:flex-row justify-center items-center"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <TextGenerateEffect
+              words={
+                "Based in New Delhi, India, a creative and logical-oriented Software Engineer with a deep interest in tech, programming, Game-development and AI Proven track record of creating and implementing successful full-stack applications. Looking to bring my skills to a tech company with global reach."
+              }
+              className="max-w-[500px] p-8"
+            />
+            <div className="relative w-full h-full rounded-xl">
+              <Image
+                src="/human.gif"
+                alt="about img"
+                fill
+                className="rounded-xl"
+              />
+            </div>
+            <RxCrossCircled
+              className="absolute top-3 right-3 text-xl text-white cursor-pointer"
+              onClick={handleOpenFolderClose}
+            />
+          </motion.div>
+        )}
+
         {openFolder === "ecommerce" && (
           <motion.div
-            className="w-[1000px] h-[500px] bg-stone-900 rounded-xl p-10 relative z-[999]"
+            className="w-full max-w-[1000px] mx-auto h-[500px] bg-stone-900 rounded-xl py-10 px-2 xl:px-10 relative z-[999]"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -55,25 +97,26 @@ const Content = ({
               className="absolute top-3 right-3 text-xl text-white cursor-pointer"
               onClick={handleOpenFolderClose}
             />
-            <div className="border h-full border-white p-4 rounded-xl">
+            <div className="border h-full border-white p-4 rounded-xl mt-4 w-full">
               <div className="flex justify-between gap-6 w-full h-full">
-                <GlowingStarsBackgroundCard className="max-w-[300px] w-full h-full flex flex-col justify-between">
-                  <GlowingStarsTitle>Next.js 14</GlowingStarsTitle>
+                <GlowingStarsBackgroundCard className="md:max-w-[300px] w-full max-w-[1000px] h-full flex flex-col justify-between">
+                  <GlowingStarsTitle>Tech-Cart</GlowingStarsTitle>
                   <div className="flex flex-col justify-between gap-4">
                     <GlowingStarsDescription className="text-sm">
-                      The power of full-stack to the frontend. Read the release
-                      notes.
+                      A full-stack E-commerce website with Admin Dashboard. Made
+                      with NextJS 14.
                     </GlowingStarsDescription>
                     <div className="h-8 w-8 text-green-500 cursor-pointer">
-                      <GoLinkExternal />
+                      <Link
+                        href="https://tech-ecommerce-virid.vercel.app/"
+                        target="_blank"
+                      >
+                        <GoLinkExternal />
+                      </Link>
                     </div>
                   </div>
                 </GlowingStarsBackgroundCard>
-                <div
-                  className="relative w-full h-full"
-                  onMouseEnter={() => setHovered(true)}
-                  onMouseLeave={() => setHovered(false)}
-                >
+                <div className="relative w-full h-full hidden md:block">
                   <div className="relative w-full h-full rounded-xl">
                     <Image
                       src="/ecommerce.png"
@@ -89,7 +132,7 @@ const Content = ({
         )}
         {openFolder === "social" && (
           <motion.div
-            className="w-[1000px] h-[500px] bg-stone-900 rounded-xl p-10 relative z-[999]"
+            className="w-full max-w-[1000px] mx-auto h-[500px] bg-stone-900 rounded-xl py-10 px-2 xl:px-10 relative z-[999]"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -99,25 +142,25 @@ const Content = ({
               className="absolute top-3 right-3 text-xl text-white cursor-pointer"
               onClick={handleOpenFolderClose}
             />
-            <div className="border h-full border-white p-4 rounded-xl">
+            <div className="border h-full border-white p-4 rounded-xl mt-4">
               <div className="flex justify-between gap-6 w-full h-full">
-                <GlowingStarsBackgroundCard className="max-w-[300px] w-full h-full flex flex-col justify-between">
-                  <GlowingStarsTitle>Next.js 14</GlowingStarsTitle>
+                <GlowingStarsBackgroundCard className="md:max-w-[300px] w-full max-w-[1000px] h-full flex flex-col justify-between">
+                  <GlowingStarsTitle>Saamaajik</GlowingStarsTitle>
                   <div className="flex flex-col justify-between gap-4">
                     <GlowingStarsDescription className="text-sm">
-                      The power of full-stack to the frontend. Read the release
-                      notes.
+                      A full-stack social-media website made with NextJS 14.
                     </GlowingStarsDescription>
                     <div className="h-8 w-8 text-green-500 cursor-pointer">
-                      <GoLinkExternal />
+                      <Link
+                        href="https://saamaajik.vercel.app/"
+                        target="_blank"
+                      >
+                        <GoLinkExternal />
+                      </Link>
                     </div>
                   </div>
                 </GlowingStarsBackgroundCard>
-                <div
-                  className="relative w-full h-full"
-                  onMouseEnter={() => setHovered(true)}
-                  onMouseLeave={() => setHovered(false)}
-                >
+                <div className="relative w-full h-full hidden md:block">
                   <div className="relative w-full h-full rounded-xl">
                     <Image
                       src="/social.png"
@@ -131,46 +174,51 @@ const Content = ({
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
-
-      {openFolder === "artico" && (
-        <div className="w-[1000px] h-[500px] bg-stone-900 rounded-xl p-10 relative z-[999]">
-          <RxCrossCircled
-            className="absolute top-3 right-3 text-xl text-white cursor-pointer"
-            onClick={handleOpenFolderClose}
-          />
-          <div className="border h-full border-white p-4 rounded-xl">
-            <div className="flex justify-between gap-6 w-full h-full">
-              <GlowingStarsBackgroundCard className="max-w-[300px] w-full h-full flex flex-col justify-between">
-                <GlowingStarsTitle>Next.js 14</GlowingStarsTitle>
-                <div className="flex flex-col justify-between gap-4">
-                  <GlowingStarsDescription className="text-sm">
-                    The power of full-stack to the frontend. Read the release
-                    notes.
-                  </GlowingStarsDescription>
-                  <div className="h-8 w-8 text-green-500 cursor-pointer">
-                    <GoLinkExternal />
+        {openFolder === "artico" && (
+          <motion.div
+            className="w-full max-w-[1000px] mx-auto h-[500px] bg-stone-900 rounded-xl py-10 px-2 xl:px-10 relative z-[999]"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <RxCrossCircled
+              className="absolute top-3 right-3 text-xl text-white cursor-pointer"
+              onClick={handleOpenFolderClose}
+            />
+            <div className="border h-full border-white p-4 rounded-xl mt-4">
+              <div className="flex justify-between gap-6 w-full h-full">
+                <GlowingStarsBackgroundCard className="md:max-w-[300px] w-full max-w-[1000px] h-full flex flex-col justify-between">
+                  <GlowingStarsTitle>Artico</GlowingStarsTitle>
+                  <div className="flex flex-col justify-between gap-4">
+                    <GlowingStarsDescription className="text-sm">
+                      A full-stack Blogs publishing app made with MERN stack.
+                    </GlowingStarsDescription>
+                    <div className="h-8 w-8 text-green-500 cursor-pointer">
+                      <Link
+                        href="https://artico-blog-app.onrender.com/"
+                        target="_blank"
+                      >
+                        <GoLinkExternal />
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </GlowingStarsBackgroundCard>
-              <div
-                className="relative w-full h-full"
-                onMouseEnter={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
-              >
-                <div className="relative w-full h-full rounded-xl">
-                  <Image
-                    src="/artico.png"
-                    alt="poe"
-                    fill
-                    className="object-contain rounded-xl"
-                  />
+                </GlowingStarsBackgroundCard>
+                <div className="relative w-full h-full hidden md:block">
+                  <div className="relative w-full h-full rounded-xl">
+                    <Image
+                      src="/artico.png"
+                      alt="poe"
+                      fill
+                      className="object-contain rounded-xl"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -1,8 +1,16 @@
 "use client";
 
 import React from "react";
-import { FaRegFolderOpen } from "react-icons/fa6";
-import { IoMdDocument } from "react-icons/io";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import FolderStructure from "./FolderStructure";
 
 const Folders = ({
   openFolder,
@@ -11,42 +19,28 @@ const Folders = ({
   openFolder: string;
   setOpenFolder: React.Dispatch<React.SetStateAction<string>>;
 }) => {
-  const handleOpenFolderChange = (name: string) => {
-    setOpenFolder(name);
-  };
-
   return (
     <div className="absolute left-6 top-[5%] z-[999]">
-      <div className="flex flex-col gap-20">
-        <div className="cursor-pointer flex flex-col items-center">
-          <IoMdDocument className="text-green-600 text-4xl" />
-          <p className="text-white">About.txt</p>
-        </div>
-        <div
-          className="cursor-pointer flex flex-col items-center"
-          onClick={() => handleOpenFolderChange("ecommerce")}
-        >
-          <FaRegFolderOpen className="text-green-600 text-4xl" />
-          <p className="text-white max-w-[130px] text-center">
-            E-Commerce Project
-          </p>
-        </div>
-        <div
-          className="cursor-pointer flex flex-col items-center"
-          onClick={() => handleOpenFolderChange("social")}
-        >
-          <FaRegFolderOpen className="text-green-600 text-4xl" />
-          <p className="text-white max-w-[130px] text-center">
-            Social-Media Project
-          </p>
-        </div>
-        <div
-          className="cursor-pointer flex flex-col items-center"
-          onClick={() => handleOpenFolderChange("artico")}
-        >
-          <FaRegFolderOpen className="text-green-600 text-4xl" />
-          <p className="text-white max-w-[130px] text-center">Blogs Project</p>
-        </div>
+      <div className="xl:hidden">
+        <Sheet>
+          <SheetTrigger className="bg-white p-1">Open</SheetTrigger>
+          <SheetContent
+            side="left"
+            className="bg-stone-900 z-[999] text-white border-[#43b243]"
+          >
+            <SheetHeader className="h-full">
+              <SheetDescription className="flex flex-col justify-center h-full">
+                <SheetClose>
+                  <FolderStructure setOpenFolder={setOpenFolder} />
+                </SheetClose>
+              </SheetDescription>
+            </SheetHeader>
+          </SheetContent>
+        </Sheet>
+      </div>
+
+      <div className="hidden xl:block">
+        <FolderStructure setOpenFolder={setOpenFolder} />
       </div>
     </div>
   );
