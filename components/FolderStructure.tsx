@@ -22,6 +22,15 @@ const FolderStructure = ({
       </div>
       <div
         className="cursor-pointer flex flex-col items-center"
+        onClick={() => handleOpenFolderChange("photography")}
+      >
+        <FaRegFolderOpen className="text-[#43b243] text-4xl" />
+        <p className="text-white max-w-[130px] text-center">
+          Photography Project
+        </p>
+      </div>
+      <div
+        className="cursor-pointer flex flex-col items-center"
         onClick={() => handleOpenFolderChange("ecommerce")}
       >
         <FaRegFolderOpen className="text-[#43b243] text-4xl" />

@@ -85,6 +85,52 @@ const Content = ({
           </motion.div>
         )}
 
+        {openFolder === "photography" && (
+          <motion.div
+            className="w-full max-w-[1000px] mx-auto h-[500px] bg-stone-900 rounded-xl py-10 px-2 xl:px-10 relative z-[999]"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <RxCrossCircled
+              className="absolute top-3 right-3 text-xl text-white cursor-pointer"
+              onClick={handleOpenFolderClose}
+            />
+            <div className="border h-full border-white p-4 rounded-xl mt-4 w-full">
+              <div className="flex justify-between gap-6 w-full h-full">
+                <GlowingStarsBackgroundCard className="md:max-w-[300px] w-full max-w-[1000px] h-full flex flex-col justify-between">
+                  <GlowingStarsTitle>Tech-Cart</GlowingStarsTitle>
+                  <div className="flex flex-col justify-between gap-4">
+                    <GlowingStarsDescription className="text-sm">
+                      A front-end Photography Portfolio website made for a real
+                      client. Made with NextJS 14.
+                    </GlowingStarsDescription>
+                    <div className="h-8 w-8 text-green-500 cursor-pointer">
+                      <Link
+                        href="https://manishphotography.vercel.app/"
+                        target="_blank"
+                      >
+                        <GoLinkExternal />
+                      </Link>
+                    </div>
+                  </div>
+                </GlowingStarsBackgroundCard>
+                <div className="relative w-full h-full hidden md:block">
+                  <div className="relative w-full h-full rounded-xl">
+                    <Image
+                      src="/manish.png"
+                      alt="poe"
+                      fill
+                      className="object-contain rounded-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
         {openFolder === "ecommerce" && (
           <motion.div
             className="w-full max-w-[1000px] mx-auto h-[500px] bg-stone-900 rounded-xl py-10 px-2 xl:px-10 relative z-[999]"
