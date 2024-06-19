@@ -25,10 +25,10 @@ const Projects = () => {
         <Link
           href="https://sanke-case.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg"
+          className="relative w-full link-container max-w-[850px] rounded-lg p-16"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
-            <h1 className="text-4xl text-white text-balance">Snake Case</h1>
+            <h1 className="text-4xl text-white text-center">Snake Case</h1>
           </div>
           <Image
             src="/snake-case.png"
@@ -40,10 +40,10 @@ const Projects = () => {
         <Link
           href="https://trello-clone-sigma-wine.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg"
+          className="relative w-full link-container max-w-[850px] rounded-lg p-16"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
-            <h1 className="text-4xl text-white">Taskify</h1>
+            <h1 className="text-4xl text-white text-center">Taskify</h1>
           </div>
           <Image
             src="/taskify.png"
@@ -55,10 +55,10 @@ const Projects = () => {
         <Link
           href="https://tech-ecommerce-virid.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg"
+          className="relative w-full link-container max-w-[850px] rounded-lg p-16"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
-            <h1 className="text-4xl text-white">Tech Cart</h1>
+            <h1 className="text-4xl text-white text-center">Tech Cart</h1>
           </div>
           <Image
             src="/tech-ecommerce.png"
@@ -70,10 +70,10 @@ const Projects = () => {
         <Link
           href="https://artico-alpha.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg"
+          className="relative w-full link-container max-w-[850px] rounded-lg p-16"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
-            <h1 className="text-4xl text-white">Artico</h1>
+            <h1 className="text-4xl text-white text-center">Artico</h1>
           </div>
           <Image
             src="/artico.png"
@@ -85,7 +85,7 @@ const Projects = () => {
         <Link
           href="https://manishphotography.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg"
+          className="relative w-full link-container max-w-[850px] rounded-lg p-16"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full p-2">
             <h1 className="text-4xl text-white text-wrap text-center">
