@@ -25,7 +25,7 @@ const FolderStructure = ({
       </div>
       <div
         className="cursor-pointer flex flex-col items-center"
-        onClick={() => router.push("/projects")}
+        onClick={() => handleOpenFolderChange("projects")}
       >
         <FaRegFolderOpen className="text-[#43b243] text-4xl" />
         <p className="text-white max-w-[130px] text-center">Projects</p>

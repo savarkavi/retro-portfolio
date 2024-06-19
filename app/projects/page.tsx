@@ -5,6 +5,10 @@ import { Divz } from "divz";
 import Link from "next/link";
 import React from "react";
 import localFont from "next/font/local";
+import {
+  GlowingStarsBackgroundCard,
+  GlowingStarsTitle,
+} from "@/components/ui/glowing-stars";
 
 const myFont = localFont({
   src: "../../fonts/Flexi_IBM_VGA_False.ttf",

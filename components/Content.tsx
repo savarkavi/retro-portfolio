@@ -4,15 +4,11 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { RxCrossCircled } from "react-icons/rx";
 import localFont from "next/font/local";
-import { GoLinkExternal } from "react-icons/go";
-import {
-  GlowingStarsBackgroundCard,
-  GlowingStarsDescription,
-  GlowingStarsTitle,
-} from "./ui/glowing-stars";
-import { AnimatePresence, motion } from "framer-motion";
+
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { GlareCard } from "./ui/glare-card";
 
 const myFont = localFont({
   src: "../fonts/3D-Thirteen-Pixel-Fonts.ttf",
@@ -37,7 +33,7 @@ const Content = ({
   };
 
   return (
-    <div className="realtive p-4 mt-6 w-full">
+    <div className="realtive p-4 mt-6 w-full min-h-screen">
       <div className="z-[99] absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[350px] xl:max-w-[1000px] text-center flex flex-col items-center">
         <div className="relative w-full max-w-[500px] h-[250px]">
           <Image
@@ -78,6 +74,63 @@ const Content = ({
           </div>
           <RxCrossCircled
             className="absolute top-3 right-3 text-xl text-white cursor-pointer"
+            onClick={handleOpenFolderClose}
+          />
+        </motion.div>
+      )}
+      {openFolder === "projects" && (
+        <motion.div
+          className="bg-black w-full max-w-[1200px] mx-auto h-full rounded-xl relative z-[999]"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+        >
+          <div className="flex flex-wrap gap-6">
+            <Link href="https://sanke-case.vercel.app/" target="_blank">
+              <GlareCard className="relative">
+                <div className="bg-gradient-to-r from-[#50C878] to-[#228B22] w-full h-full flex flex-col justify-center items-center">
+                  SNAKE CASE
+                </div>
+              </GlareCard>
+            </Link>
+            <Link
+              href="https://trello-clone-sigma-wine.vercel.app/"
+              target="_blank"
+            >
+              <GlareCard className="relative">
+                <div className="bg-gradient-to-r from-[#50C878] to-[#228B22] w-full h-full flex justify-center items-center">
+                  TASKIFY
+                </div>
+              </GlareCard>
+            </Link>
+            <Link
+              href="https://tech-ecommerce-virid.vercel.app/"
+              target="_blank"
+            >
+              <GlareCard className="relative">
+                <div className="bg-gradient-to-r from-[#50C878] to-[#228B22] w-full h-full flex justify-center items-center">
+                  TECH CART
+                </div>
+              </GlareCard>
+            </Link>
+            <Link href="https://artico-blog-app.onrender.com/" target="_blank">
+              <GlareCard className="relative">
+                <div className="bg-gradient-to-r from-[#50C878] to-[#228B22] w-full h-full flex justify-center items-center">
+                  ARTICO
+                </div>
+              </GlareCard>
+            </Link>
+            <Link href="https://manishphotography.vercel.app/" target="_blank">
+              <GlareCard className="relative">
+                <div className="bg-gradient-to-r from-[#50C878] to-[#228B22] w-full h-full flex justify-center items-center">
+                  PHOTOGRAPHY PORTFOLIO
+                </div>
+              </GlareCard>
+            </Link>
+          </div>
+          <RxCrossCircled
+            className="absolute -top-4 right-0 text-2xl text-white cursor-pointer"
             onClick={handleOpenFolderClose}
           />
         </motion.div>
