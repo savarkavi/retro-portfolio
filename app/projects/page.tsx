@@ -25,7 +25,7 @@ const Projects = () => {
         <Link
           href="https://sanke-case.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg px-16"
+          className="relative w-full link-container max-w-[850px] rounded-lg"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
             <h1 className="text-4xl text-white text-center">Snake Case</h1>
@@ -40,7 +40,7 @@ const Projects = () => {
         <Link
           href="https://trello-clone-sigma-wine.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg px-16"
+          className="relative w-full link-container max-w-[850px] rounded-lg"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
             <h1 className="text-4xl text-white text-center">Taskify</h1>
@@ -55,7 +55,7 @@ const Projects = () => {
         <Link
           href="https://tech-ecommerce-virid.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg px-16"
+          className="relative w-full link-container max-w-[850px] rounded-lg"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
             <h1 className="text-4xl text-white text-center">Tech Cart</h1>
@@ -70,7 +70,7 @@ const Projects = () => {
         <Link
           href="https://artico-alpha.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg px-16"
+          className="relative w-full link-container max-w-[850px] rounded-lg"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
             <h1 className="text-4xl text-white text-center">Artico</h1>
@@ -85,7 +85,7 @@ const Projects = () => {
         <Link
           href="https://manishphotography.vercel.app/"
           target="_blank"
-          className="relative w-full link-container max-w-[850px] rounded-lg px-16"
+          className="relative w-full link-container max-w-[850px] rounded-lg"
         >
           <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full p-2">
             <h1 className="text-4xl text-white text-wrap text-center">
