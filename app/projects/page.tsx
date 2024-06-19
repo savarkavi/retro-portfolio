@@ -17,26 +17,19 @@ const Projects = () => {
       className="w-full h-screen flex justify-center items-center"
       colors={["#80C342", "#66BC46", "#47B649", "#118B44"]}
     >
-      <Divz>
+      <Divz
+        showExpandButton={false}
+        showPlayButton={false}
+        className="border p-0"
+      >
         <Link
           href="https://sanke-case.vercel.app/"
           target="_blank"
-          className="relative"
+          className="relative w-full max-w-[850px] p-8 rounded-lg"
         >
-          <LampContainer>
-            <motion.h1
-              initial={{ opacity: 0.5, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-            >
-              Snake Case
-            </motion.h1>
-          </LampContainer>
+          <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
+            <h1 className="text-4xl text-white text-balance">Snake Case</h1>
+          </div>
           <Image
             src="/snake-case.png"
             alt="project image"
@@ -47,22 +40,11 @@ const Projects = () => {
         <Link
           href="https://trello-clone-sigma-wine.vercel.app/"
           target="_blank"
-          className="relative"
+          className="relative w-full max-w-[850px] p-8 rounded-lg"
         >
-          <LampContainer>
-            <motion.h1
-              initial={{ opacity: 0.5, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-            >
-              Taskify
-            </motion.h1>
-          </LampContainer>
+          <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
+            <h1 className="text-4xl text-white">Taskify</h1>
+          </div>
           <Image
             src="/taskify.png"
             alt="project image"
@@ -73,22 +55,11 @@ const Projects = () => {
         <Link
           href="https://tech-ecommerce-virid.vercel.app/"
           target="_blank"
-          className="relative"
+          className="relative w-full max-w-[850px] p-8 rounded-lg"
         >
-          <LampContainer>
-            <motion.h1
-              initial={{ opacity: 0.5, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-            >
-              Tech Cart
-            </motion.h1>
-          </LampContainer>
+          <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
+            <h1 className="text-4xl text-white">Tech Cart</h1>
+          </div>
           <Image
             src="/tech-ecommerce.png"
             alt="project image"
@@ -99,22 +70,11 @@ const Projects = () => {
         <Link
           href="https://artico-alpha.vercel.app/"
           target="_blank"
-          className="relative"
+          className="relative w-full max-w-[850px] p-8 rounded-lg"
         >
-          <LampContainer>
-            <motion.h1
-              initial={{ opacity: 0.5, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-            >
-              Artico
-            </motion.h1>
-          </LampContainer>
+          <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full">
+            <h1 className="text-4xl text-white">Artico</h1>
+          </div>
           <Image
             src="/artico.png"
             alt="project image"
@@ -125,22 +85,13 @@ const Projects = () => {
         <Link
           href="https://manishphotography.vercel.app/"
           target="_blank"
-          className="relative"
+          className="relative w-full max-w-[850px] p-8 rounded-lg"
         >
-          <LampContainer>
-            <motion.h1
-              initial={{ opacity: 0.5, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-            >
-              Photographer portfolio
-            </motion.h1>
-          </LampContainer>
+          <div className="flex justify-center items-center bg-gradient-to-r from-zinc-700 to-black w-full h-full p-2">
+            <h1 className="text-4xl text-white text-wrap">
+              Photography portfolio
+            </h1>
+          </div>
           <Image
             src="/manish.png"
             alt="project image"
